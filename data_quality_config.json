@@ -1,0 +1,33 @@
+{
+    "database": {
+        "connection_string": "sqlite:///your_database.db",
+        "query": "SELECT * FROM your_table WHERE date >= '2025-01-01'"
+    },
+    "email": {
+        "sender": "your_email@example.com",
+        "receiver": "recipient@example.com",
+        "password": "your_password"
+    },
+    "thresholds": {
+        "missing_values": 10,
+        "duplicates": 5
+    },
+    "anomaly": {
+        "contamination": 0.05
+    },
+    "custom_rules": [
+        {
+            "column": "revenue",
+            "condition": "max",
+            "threshold": 10000
+        },
+        {
+            "column": "revenue",
+            "condition": "min",
+            "threshold": 0
+        }
+    ],
+    "schedule": {
+        "interval_minutes": 60
+    }
+}
